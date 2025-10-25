@@ -29,7 +29,7 @@ bool p = a*a == b*b + c*c;
 p = p|| b*b == a*a + c*c;
 p = p|| c*c == a*a + b*b;
 
-if( a > 0 && b > UINT_MAX / a) {
+if( a > 0 && a > UINT_MAX / a) {
 std::cerr << "Overflow occured\n";
 return 2;
 }
