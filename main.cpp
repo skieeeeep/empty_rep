@@ -28,5 +28,22 @@ bool isPyth(unsigned a, unsigned b, unsigned c){
 bool p = a*a == b*b + c*c;
 p = p|| b*b == a*a + c*c;
 p = p|| c*c == a*a + b*b;
+
+if( a > 0 && b > UINT_MAX / a) {
+std::cerr << "Overflow occured\n";
+return 2;
+}
+if ( b > 0 && b > UINT_MAX / b) {
+std::cerr << "Overflow occured\n";
+return 2;
+}
+if (c > 0 && c > UINT_MAX /c) {
+std::cerr << "Overflow occured\n";
+return 2;
+}
+if (p > UINT_MAX){
+std::cerr << "Overflow occured\n";
+return 2;
+}
 return p
 }
