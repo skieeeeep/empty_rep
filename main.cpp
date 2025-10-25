@@ -3,13 +3,15 @@ bool isPyth(unsigned, unsigned, unsigned);
 
 int main()
 {
-using_t=unsigned;
+using u_t=unsigned;
 u_t a = 0, b=0, c=0;
+std::cin >> c >> b;
 size_t count = 0;
 std::cin >> a;
 
 while (std::cin >>a){
 count += isPyth(a,b,c) ? 1 : 0;
+c = b; b = a;
 }
 if (std::cin.eof()){
 std::cout << count;
