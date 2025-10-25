@@ -20,7 +20,7 @@ std::cout << "\n";
 
 else if (std::cin.fail()){
 std::cerr << "Incorrect input\n";
-return 1
+return 1;
 }
 }
 
@@ -45,5 +45,5 @@ if (p > UINT_MAX){
 std::cerr << "Overflow occured\n";
 return 2;
 }
-return p
+return p;
 }
